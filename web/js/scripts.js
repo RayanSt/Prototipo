@@ -403,17 +403,46 @@
 
     //let map = L.map('map').setView([4.62869, -74.06511], 15)
     let map = L.map('map')
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href = "https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href = "https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    //let parkingMarker = L.ExtraMarkers.icon({
-    //    icon: "fa-leaf",
-    //    markerColor: "blue",
-    //    shape: "penta",
-    //    prefix: "fa"
-    //})
-    //let marker = L.marker([4.62869, -74.06511]).addTo(map);
+    //L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    //attribution: 'Rubén Alcaraz. Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    //maxZoom: 20,
+    //id: 'mapbox.comic',
+    //accessToken: 'pk.eyJ1IjoicmFsY2FyYXoiLCJhIjoiY2prNmRxcmh1MXNqODNya2NocWY5azEweCJ9.4Qf2Wgh-d1e_ujcRkvq0MA'
+    //}).addTo(map);
+
+    /*
+    var iconoBase = L.icon({
+            iconUrl: "images/PMarker.png",
+            iconSize:     [38, 95],
+            iconAnchor:   [22, 94],
+            popupAnchor:  [-3, -76]
+        
+    }); */
+
+    var iconoEstandar = L.Icon.extend({
+        options: {
+            iconSize:     [30, 40],
+            iconAnchor:   [0, 30],
+            popupAnchor:  [15, -30]
+        }
+    })
+/*
+    var redMarker = L.AwesomeMarkers.icon({
+        icon: 'coffee',
+        markerColor: 'green'
+      });
+          
+    L.marker([4.62869, -74.06511], {icon: redMarker}).addTo(map);
+*/
+    var iconoParqueadero = new iconoEstandar({iconUrl: "images/Marker.png"}),
+		iconoPunto = new iconoEstandar({IconUrl: "images/PMarker.png"});
+
+    //const Mymarker = L.marker({lat: 4.62869, lng: -74.06511}, {icon: iconoBase}).bindPopup("<h1>Usted se encuentra en este lugar.</p>",estiloPopup).addTo(map);
+    
     let geojson_url = "https://raw.githubusercontent.com/RayanSt/Mapas/main/map.geojson"
 
     if (navigator.geolocation) {
@@ -424,6 +453,7 @@
                 })
             });
         }
+        
     fetch(
         geojson_url
         ).then(
@@ -433,12 +463,13 @@
                     let geojsonLayer = L.geoJson(data, {
                         onEachFeature: function(feature, layer){
                             layer.bindPopup(feature.properties['nombre'])
-                            //layer.setIcon(parkingMarker)
+                            layer.setIcon(iconoParqueadero)
                         }
                     }).addTo(map)
                     map.fitBounds(geojsonLayer.getBounds())
                 }
-                )
+                ) 
+    let Mymarker = L.marker([4.62869, -74.06511], {icon: iconoPunto}).bindPopup("<h1>Usted se encuentra en este lugar.</p>",estiloPopup).addTo(map);
     //L.geoJson(mapM).addTo(map);
     //map.fitBounds
 
