@@ -399,7 +399,6 @@
 
     
         
-    
 
     //let map = L.map('map').setView([4.62869, -74.06511], 15)
     let map = L.map('map')
@@ -472,5 +471,7 @@
     let Mymarker = L.marker([4.62869, -74.06511], {icon: iconoPunto}).bindPopup("<h1>Usted se encuentra en este lugar.</p>",estiloPopup).addTo(map);
     //L.geoJson(mapM).addTo(map);
     //map.fitBounds
+
+    
 
 })(jQuery);
