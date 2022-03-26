@@ -21,6 +21,7 @@
     <title>ParkAdo Website</title>
     
     <!-- Styles -->
+    <link rel="stylesheet" href="leaflet-routing-machine-3.2.5/dist/leaflet-routing-machine.css"> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/dist/css/leaflet.extra-markers.min.css" rel="stylesheet">
@@ -29,7 +30,7 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet.css" >
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -55,7 +56,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/Logo3.png" alt="alternative"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,34 +68,26 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#header">INICIO <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="#header">INICIO <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
+                        <a class="nav-link page-scroll" href="#mision">MISIÓN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#details">DETAILS</a>
+                        <a class="nav-link page-scroll" href="#vision">VISIÓN</a>
                     </li>
-
-                    <!-- Dropdown Menu -->          
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle page-scroll" href="index.html#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEO</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" id="LocalizacionCheck" href="article-details.html"><span class="item-text">ARTICLE DETAILS</span></a>
-                            <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
-                            <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
-                        </div>
-                    </li>
-                    <!-- end of dropdown menu -->
-
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#pricing">PRICING</a>
+                        <a class="nav-link page-scroll" href="#enfoque">ENFOQUE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="parqueaderos.html">PARQUEADEROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="planes.html">PLANES</a>
                     </li>
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="log-in.html">LOG IN</a>
+                    <a class="btn-outline-sm" href="log-in.html">INICIAR SESIÓN</a>
                 </span>
             </div>
         </div> <!-- end of container -->
@@ -132,7 +125,29 @@
                                     <div class="card-body">
                                       <h5 class="card-title">6.600 COP Parqueadero en arriendo</h5>
                                       <p class="card-text">Parqueadero para carro mediano, bicicleta o motos en conjunto, 20 metros cuadrados, vigilado las 24 horas.</p>
-                                      <a href="#" class="btn-outline-reg">Ver mas</a>
+                                      <p>Tipo de vehiculo:
+                                        <input type="radio" name="hm" value="h" required> Moto
+                                        <input type="radio" name="hm" value="m" required> Carro
+                                      </p>
+                                      <p>
+                                      Fecha: <input type="date" name="fecha">
+                                      Hora: <input type="time" name="hora">
+                                      </p>
+                                      <textarea name="texto" rows="4" cols="50" placeholder="Observaciones"></textarea>
+                                      <p>
+                                      Horas requeridas:     
+                                      <select name="menu">
+                                        <option value="1" selected>1 hr</option>
+                                        <option value="2">2 hrs</option>
+                                        <option value="3">5 hrs</option>
+                                        <option value="3">otro</option>
+                                      </select>
+                                      <p>Otro: <input type="text" name="hora" maxlength="6"></p>
+                                    </p>
+                                    <p>
+                                      <a href="#" class="btn-outline-reg">Pagar</a>
+                                      <a href="https://wa.me/573133205632?text=Me%20interesa%20tener%20mas%20informacion%20del%20parqueadero" class="btn-outline-reg">Contactar asesor</a>
+                                    </p>
                                     </div>
                                   </div>
                                   
@@ -167,7 +182,7 @@
                             </div> <!-- end of col -->
 
                             <div class="col-md-6">
-                                <div id="map"></div>
+                                <div id="map2"></div>
                                 <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xdQRpelsXQk8k6D-ldp6EMuCQRaMd46v&ehbc=2E312F" width="640" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                                 <!-- 
                                 <ul class="list-unstyled li-space-lg indent">
@@ -294,6 +309,7 @@
     
     	
     <!-- Scripts -->
+    <script src="leaflet-routing-machine-3.2.5/dist/leaflet-routing-machine.js"></script> 
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
@@ -303,6 +319,7 @@
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script type="text/javascript" src="maps/mapM.geojson"></script>
     <script src="js/leaflet.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 
 </body>
