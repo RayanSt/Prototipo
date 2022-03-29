@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="ParkAdo">
+    <meta name="author" content="UD">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -17,7 +17,6 @@
 	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
 	<meta property="og:type" content="article" />
 
-    <!-- Website Title -->
     <!-- Website Title -->
     <title>ParkAdo website</title>
     
@@ -50,10 +49,10 @@
         <div class="container">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-             <a class="navbar-brand logo-text page-scroll" href="index.html">ParkAdo</a> 
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">ParkAdo</a> -->
 
             <!-- Image Logo -->
-            
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo3.png" alt="alternative"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,17 +64,19 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">INICIO <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="index.html#header">INICIO <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#mision">MISIÓN</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">CONTENIDO</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link page-scroll" href="index.html#mision"><span class="item-text">MISIÓN</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="nav-link page-scroll" href="index.html#vision"><span class="item-text">VISIÓN</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="nav-link page-scroll" href="index.html#enfoque"><span class="item-text">ENFOQUE</span></a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#vision">VISIÓN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#enfoque">ENFOQUE</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="parqueaderos.html">PARQUEADEROS</a>
                     </li>
@@ -83,6 +84,9 @@
                         <a class="nav-link page-scroll" href="planes.html">PLANES</a>
                     </li>
                 </ul>
+                <span class="nav-item">
+                    <a class="btn-outline-sm" href="log-in.html">INICIAR SESIÓN</a>
+                </span>
             </div>
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->

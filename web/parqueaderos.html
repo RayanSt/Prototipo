@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="ParkAdo">
+    <meta name="author" content="UD">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -21,13 +21,15 @@
     <title>ParkAdo website</title>
     
     <!-- Styles -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/dist/css/leaflet.extra-markers.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="css/leaflet.css" />
 	
@@ -52,10 +54,10 @@
         <div class="container">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">ParkAdo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo3.png" alt="alternative"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,32 +71,26 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="index.html#header">INICIO <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#details">DETAILS</a>
-                    </li>
-
-                    <!-- Dropdown Menu -->          
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle page-scroll" href="index.html#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEO</a>
+                        <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">CONTENIDO</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" id="LocalizacionCheck" href="article-details.html"><span class="item-text">ARTICLE DETAILS</span></a>
+                            <a class="nav-link page-scroll" href="index.html#mision"><span class="item-text">MISIÓN</span></a>
                             <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
+                            <a class="nav-link page-scroll" href="index.html#vision"><span class="item-text">VISIÓN</span></a>
                             <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
+                            <a class="nav-link page-scroll" href="index.html#enfoque"><span class="item-text">ENFOQUE</span></a>
                         </div>
                     </li>
-                    <!-- end of dropdown menu -->
-
+                    
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#pricing">PRICING</a>
+                        <a class="nav-link page-scroll" href="parqueaderos.html">PARQUEADEROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="planes.html">PLANES</a>
                     </li>
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="log-in.html">LOG IN</a>
+                    <a class="btn-outline-sm" href="log-in.html">INICIAR SESIÓN</a>
                 </span>
             </div>
         </div> <!-- end of container -->
@@ -109,6 +105,8 @@
                 <div class="col-md-12">
                     <h1>Detalles de parqueaderos disponibles</h1>
                 </div> <!-- end of col -->
+
+                
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
@@ -129,111 +127,311 @@
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
+    <div class="container" style="border: 0.1rem solid #333; border-radius: 1rem; margin-top: 3%;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-container">
+                    <div class="above-heading"></div>
+                    <h2>Buscar parqueaderos en la ciudad de Bogotá</h2>
+
+                    <!-- Newsletter Form -->
+                    <form id="newsletterForm" data-toggle="validator" data-focus="false">
+                        <div class="form-group">
+                                <div class="medio">
+                                    <input type="text" list="items" class="form-control-input" required/>
+                                    <label class="label-control" for="nemail">Ubicación</label>
+                                    <!-- Lista de opciones -->
+                                    <datalist id="items">
+                                        <option value="Suba, Cundinamarca,Bogotá" class="opcion-seleccion">Suba</option>
+                                        <option value="Usaquen, Cundinamarca, Bogotá" class="opcion-seleccion">Usaquen</option>
+                                        <option value="Bosa, Cundinamarca, Bogotá" class="opcion-seleccion">Bosa</option>
+                                    </datalist>
+                                </div>
+
+                                <div class="medio">
+                                    <select class="seleccion">
+                                        <option class="opcion-seleccion" value="Tipo de arriendo">Tipo de arriendo</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="saab">Por horas</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="mercedes">Por días</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="audi">Por meses</option>
+                                      </select>
+                                </div>
+
+                                <div class="medio">
+                                    <select class="seleccion">
+                                        <option class="opcion-seleccion" value="Tipo de vehículo">Tipo de vehículo</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="Automóvi">Automóvi</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="Motocicleta">Motocicleta</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="Camioneta">Camioneta</option>
+                                        <div class="dropdown-items-divide-hr"></div>
+                                        <option class="opcion-seleccion" value="Microbús">Microbús</option>
+                                      </select>
+                                </div>
+
+                                
+
+                                <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group checkbox">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">BUSCAR</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="nmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of newsletter form -->
+
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        
+    </div> <!-- end of container -->
 
     <!-- Privacy Content -->
     <div class="ex-basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!--  
-                    <div class="image-container-large">
-                        <img class="img-fluid" src="images/article-details-large.jpg" alt="alternative">
-                    </div> -->
+                    
                     <div class="text-container">
-                        <h3>Business Analysis And Reporting Tools</h3>
-                        <p>Tivo also automatically collects and receives certain information from your computer or mobile device, including the activities you perform on our Website, the Platforms, and the Applications, the type of hardware and software you are using (for example, your operating system or browser), and information obtained from cookies. For example, each time you visit the Website or otherwise use the Services, we automatically collect your IP address, browser and device type, access times, the web page from which you came, the regions from which you navigate the web page, and the web page(s) you access (as applicable).</p>
-                        <p>When you first register for a Tivo account, and when you use the Services, we collect some <a class="blue" href="#your-link">Personal Information</a> about you such as:</p>
+                        
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Parqueadero 1</h5>
-                                      <p class="card-text">Breve descripcion</p>
-                                      <a href="#" class="btn-outline-reg">Ver mas</a>
-                                    </div>
-                                  </div>
-                                  <div class="card">
-                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Parqueadero 2</h5>
-                                      <p class="card-text">Breve descripcion</p>
-                                      <a href="#" class="btn-outline-reg">Ver mas</a>
-                                    </div>
-                                  </div>
-                                  <div class="card">
-                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Parqueadero 3</h5>
-                                      <p class="card-text">Breve descripcion</p>
-                                      <a href="#" class="btn-outline-reg">Ver mas</a>
-                                    </div>
-                                  </div>
-                                  <div class="card">
-                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Parqueadero 4</h5>
-                                      <p class="card-text">Breve descripcion</p>
-                                      <a href="#" class="btn-outline-reg">Ver mas</a>
-                                    </div>
-                                  </div>
-                                <!--
-                                <ul class="list-unstyled li-space-lg indent">
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">The geographic area where you use your computer and mobile devices should be the same with the one of your software</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Your full name, username, and email address and other contact details should be provided in the contact forms</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">A unique Tivo user ID (an alphanumeric string) which is assigned to you upon registration should always be at front</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Every system is backuped regularly and it will not fail</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Your IP Address and, when applicable, timestamp related to your consent and confirmation of consent but please make sure it does</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Other information submitted by you or your organizational representatives via various methods and practiced techniques</div>
-                                    </li>
-                                </ul>
-                                -->
-                            </div> <!-- end of col -->
+                                
 
+                                <div  class="container bcontent">
+                                    <div class="card" style="width: 500px;">
+                                        <div class="row no-gutters">
+                                            <div class="col-sm-5">
+                                                <img class="card-img" style="height: 100%; width: 100%;" src="images/Park1.png" alt="Suresh Dasari Card">
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Parquedero Lopez Jimenez</h5>
+                                                    <p class="card-text">Parqueadero para carro mediano, bicicleta o motos en conjunto</p>
+                                                    <button href="#details-lightbox-1" class="btn popup-with-move-anim">
+                                                        <!-- 		the Price -->
+                                                             <span class="price">$6,6k hora</span>
+                                                        <!-- 		shopping cart icon-->
+                                                            <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span> 
+                                                        <!-- 		Buy Now / ADD to Cart-->
+                                                           <span class="buy">Ver mas</span>
+                                                         </button>
+                                                    <!-- <a href="#details-lightbox-1" class="btn-outline-reg popup-with-move-anim">Ver mas</a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 0.5cm;" class="container bcontent">
+                                    <div class="card" style="width: 500px;">
+                                        <div class="row no-gutters">
+                                            <div class="col-sm-5">
+                                                <img class="card-img" style="height: 100%; width: 100%;" src="images/Park2.png" alt="Suresh Dasari Card">
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Parqueadero Muñoz Alvarez</h5>
+                                                    <p class="card-text">Parqueadero cubierto dentro de conjunto, cerca a estacion de Transmilenio.</p>
+                                                    <button href="#details-lightbox-2" class="btn popup-with-move-anim">
+                                                        <!-- 		the Price -->
+                                                             <span class="price">$150k Mes</span>
+                                                        <!-- 		shopping cart icon-->
+                                                            <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span> 
+                                                        <!-- 		Buy Now / ADD to Cart-->
+                                                           <span class="buy">Ver mas</span>
+                                                         </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 0.5cm;" class="container bcontent">
+                                    <div class="card" style="width: 500px;">
+                                        <div class="row no-gutters">
+                                            <div class="col-sm-5">
+                                                <img class="card-img" style="height: 100%; width: 100%;" src="images/Park3.webp" alt="Suresh Dasari Card">
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Parqueadero Morales Silva</h5>
+                                                    <p class="card-text">Parqueadero cubierto, vigilado 24 horas.</p>
+                                                    <button href="#details-lightbox-3" class="btn popup-with-move-anim">
+                                                        <!-- 		the Price -->
+                                                             <span class="price">$110k Mes</span>
+                                                        <!-- 		shopping cart icon-->
+                                                            <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span> 
+                                                        <!-- 		Buy Now / ADD to Cart-->
+                                                           <span class="buy">Ver mas</span>
+                                                         </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                
+                            </div>  <!-- end of col -->
                             <div class="col-md-6">
+                           
                                 <div id="map"></div>
-                                <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xdQRpelsXQk8k6D-ldp6EMuCQRaMd46v&ehbc=2E312F" width="640" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
-                                <!-- 
-                                <ul class="list-unstyled li-space-lg indent">
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Your billing address and any necessary other information to complete any financial transaction, and when making purchases through the Services, we may also collect your credit card or PayPal information or any other sensitive data that you consider</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">User generated content (such as messages, posts, comments, pages, profiles, images, feeds or communications exchanged on the Supported Platforms that can be used)</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Images or other files that you may publish via our Services</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Information (such as messages, posts, comments, pages, profiles, images) we may receive relating to communications you send us, such as queries or comments concerning</div>
-                                    </li>
-                                </ul>
-                                -->
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-                    </div> <!-- end of text-container-->
-                    
+                            </div>
+                        </div>
+                    </div>
+               
+                    <section class="paginacion">
+                        <ul>
+                            <li><a href="#" class="active">&#60;</a></li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li>...</li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#" class="active">&#62;</a></li>
+                        </ul>
+                    </section>
+
+
+                    <!-- Details Lightboxes -->
+    <!-- Details Lightbox 1 -->
+	<div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="container">
+            <div class="row">
+                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                <div class="col-lg-8">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/Park1.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <h3>Parqueadero Ubicado en Chapinero, Bogotá</h3>
+                    <hr>
+                    <h5>Servicios</h5>
+                    <p>Parqueadero para carro mediano, bicicleta o motos en conjunto</p>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fa-solid fa-money-bill-1-wave"></i><div class="media-body">6.600 COP/Hora</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-check"></i><div class="media-body">Disponible</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-calendar"></i><div class="media-body">Listo para reserva</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-ruler-combined"></i><div class="media-body">20 Mts2</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-heart"></i><div class="media-body">4.1/5.0</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-eraser"></i><div class="media-body">Cuenta con vigilacia privada 24 hrs</div>
+                        </li>
+                    </ul>
+                    <a class="btn-solid-reg mfp-close" href="parking.html">Reservar</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">Atras</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of details lightbox 1 -->
+
+
+    <!-- Details Lightbox 2 -->
+	<div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="container">
+            <div class="row">
+                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                <div class="col-lg-8">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/Park2.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <h3>Parqueadero Ubicado en Chapinero, Bogotá</h3>
+                    <hr>
+                    <h5>Servicios</h5>
+                    <p>Parqueadero cubierto dentro de conjunto, cerca a estacion de Transmilenio de la calle 45.</p>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fa-solid fa-money-bill-1-wave"></i><div class="media-body">150.000 COP/Mes</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-check"></i><div class="media-body">Disponible</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-calendar"></i><div class="media-body">Listo para reserva</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-ruler-combined"></i><div class="media-body">15 Mts2</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-heart"></i><div class="media-body">4.0/5.0</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-eraser"></i><div class="media-body">la administracion de seguridad se paga aparte</div>
+                        </li>
+                    </ul>
+                    <a class="btn-solid-reg mfp-close" href="parking.html">Reservar</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">Atras</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of details lightbox 2 -->
+
+    <!-- Details Lightbox 3 -->
+	<div id="details-lightbox-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="container">
+            <div class="row">
+                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                <div class="col-lg-8">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/Park3.webp" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <h3>Parqueadero Ubicado en Chapinero, Bogotá</h3>
+                    <hr>
+                    <h5>Servicios</h5>
+                    <p>Parqueadero cubierto, vigilado 24 horas.</p>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fa-solid fa-money-bill-1-wave"></i><div class="media-body">110.000 COP/Mes</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-check"></i><div class="media-body">Disponible</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-calendar"></i><div class="media-body">Listo para reserva</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-ruler-combined"></i><div class="media-body">16 Mts2</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-heart"></i><div class="media-body">4.7/5.0</div>
+                        </li>
+                        <li class="media">
+                            <i class="fa-solid fa-eraser"></i><div class="media-body">Se cuenta con circuito cerrado de camaras las 24 horas del dia</div>
+                        </li>
+                    </ul>
+                    <a class="btn-solid-reg mfp-close" href="parking.html">Reservar</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">Atras</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of details lightbox 3 -->
                     <!--
                     <div class="text-container">
                         <div class="row">
@@ -256,14 +454,14 @@
                     </div> --> <!-- end of text-container -->
 
                     <div class="text-container dark">
-                        <p class="testimonial-text">Agregar politicas</p>
+                        <p class="testimonial-text">ParkAdo siempre esta comprometido con brindar la mejor atención posible a los usuarios tanto arrendatarios como arrendadores del servicio de parqueaderos, de forma que siempre se encuentren satisfechos con la aplicación.</p>
                     </div> <!-- end of text container -->
 
                     <div class="text-container last">
-                        <h3>Descripcion de servicios</h3>
-					    <p>Bla bla bla.</p>
+                        <h3>Nuestros servicios</h3>
+					    <p>ParkAdo es una plataforma de servicio de reserva de parqueaderos, donde tu como propietario de un predio puedes ser parte de esta red de contactos con un precio comodo a tu bolsillo, o para mas facilidad bajo una pequeña comision podras dar visibilidad a tu parqueadero y asi promover el empleo seguro.</p>
                     </div> <!-- end of text-container -->
-                    <a class="btn-outline-reg" href="index.html">BACK</a>
+                    <a class="btn-outline-reg" href="index.html">INICIO</a>
                 </div> <!-- end of col-->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -277,7 +475,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Inicio/a><i class="fa fa-angle-double-right"></i><span>descripcion de parqueaderos</span>
+                        <a href="index.html">Inicio<i class="fa fa-angle-double-right"></i><span>descripcion de parqueaderos</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -287,42 +485,44 @@
 
     
     <!-- Footer -->
-    <svg class="ex-footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#5f4def;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
+
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about offering some of the best business growth services for start more words</p>
+                        <h4>Acerca de ParkAdo</h4>
+                        <p class="p-small">Empresa enfocada en brindar el mejor servicio para que arrendadores y arrendatarios puedan encontrarse de forma facil y segura</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col middle">
-                        <h4>Important Links</h4>
+                        <h4></h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
+                                
                             </li>
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
+                                
                             </li>
                         </ul>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col last">
-                        <h4>Contact</h4>
+                        <h4>Contacto</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body">Cl. 24 #32-08, Bogotá</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@Tivo.com">contact@Tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.Tivo.com</a></div>
+                                <div class="media-body"><a class="white" href="mail:contact@parkado.com">contacto@parkado.com</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-globe"></i>
+                                <div class="media-body"><a class="white" href="#your-link">www.parkado.com</a></div>
                             </li>
                         </ul>
                     </div> 
@@ -332,18 +532,6 @@
     </div> <!-- end of footer -->  
     <!-- end of footer -->
 
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
     
     	
     <!-- Scripts -->
@@ -355,6 +543,7 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script type="text/javascript" src="maps/mapM.geojson"></script>
+    <script src="https://kit.fontawesome.com/eae0154762.js" crossorigin="anonymous"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 

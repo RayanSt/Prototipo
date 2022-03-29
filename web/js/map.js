@@ -9,7 +9,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     }).addTo(map);
 
     
-var control = L.Routing.control({
+var control = L.Routing.Control({
 	waypoints: [
 		L.latLng(4.640440116913196, -74.0721845626831),
 		L.latLng(4.6319065189372886, -74.06602621078491)

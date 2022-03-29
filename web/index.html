@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="ParkAdo">
+    <meta name="author" content="UD">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -66,15 +66,17 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#header">INICIO <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#mision">MISIÓN</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">CONTENIDO</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link page-scroll" href="#mision"><span class="item-text">MISIÓN</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="nav-link page-scroll" href="#vision"><span class="item-text">VISIÓN</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="nav-link page-scroll" href="#enfoque"><span class="item-text">ENFOQUE</span></a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#vision">VISIÓN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#enfoque">ENFOQUE</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="parqueaderos.html">PARQUEADEROS</a>
                     </li>
@@ -104,9 +106,46 @@
                             <!-- Newsletter Form -->
                             <form id="newsletterForm" data-toggle="validator" data-focus="false">
                                 <div class="form-group">
-                                    <input type="text" class="form-control-input" id="nemail" required>
-                                    <label class="label-control" for="nemail">Dirección</label>
-                                    <div class="help-block with-errors"></div>
+                                        <div class="medio">
+                                            <input type="text" list="items" class="form-control-input" required/>
+                                            <label class="label-control" for="nemail">Ubicación</label>
+                                            <!-- Lista de opciones -->
+                                            <datalist id="items">
+                                                <option value="Suba, Cundinamarca,Bogotá" class="opcion-seleccion">Suba</option>
+                                                <option value="Usaquen, Cundinamarca, Bogotá" class="opcion-seleccion">Usaquen</option>
+                                                <option value="Bosa, Cundinamarca, Bogotá" class="opcion-seleccion">Bosa</option>
+                                            </datalist>
+                                        </div>
+
+                                        <div class="medio">
+                                            <select class="seleccion">
+                                                <option class="opcion-seleccion" value="Tipo de arriendo">Tipo de arriendo</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="saab">Por horas</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="mercedes">Por días</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="audi">Por meses</option>
+                                              </select>
+                                        </div>
+
+                                        <div class="medio">
+                                            <select class="seleccion">
+                                                <option class="opcion-seleccion" value="Tipo de vehículo">Tipo de vehículo</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="Automóvi">Automóvi</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="Motocicleta">Motocicleta</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="Camioneta">Camioneta</option>
+                                                <div class="dropdown-items-divide-hr"></div>
+                                                <option class="opcion-seleccion" value="Microbús">Microbús</option>
+                                              </select>
+                                        </div>
+
+                                        
+
+                                        <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group checkbox">
                                     <div class="help-block with-errors"></div>
@@ -347,7 +386,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-1.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/testimonial-1.png" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
                                         <div class="testimonial-text">Persona lider en desarrollo, con una gran experiencia en multiples proyectos de desarrollo
@@ -360,7 +399,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-2.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/testimonial-2.png" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
                                         <div class="testimonial-text">Posee un alto conocimiento en manejo y organizacion de empresas, capaz de liderar y gestionar redes de trabajo, con un nivel alto de honestidad y empatia con sus trabajadores.</div>
@@ -468,15 +507,19 @@
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col last">
-                        <h4>Contact</h4>
+                        <h4>Contacto</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body">Cl. 24 #32-08, Bogotá</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">contact@tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
+                                <div class="media-body"><a class="white" href="mail:contact@parkado.com">contacto@parkado.com</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-globe"></i>
+                                <div class="media-body"><a class="white" href="#your-link">www.parkado.com</a></div>
                             </li>
                         </ul>
                     </div> 
@@ -492,7 +535,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
+                    <p class="p-small">Copyright © 2022 <a href="https://inovatik.com">Parkado S.A.S</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
